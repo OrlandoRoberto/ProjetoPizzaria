@@ -54,7 +54,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(181, 257);
+            this.dataGridView1.Location = new System.Drawing.Point(228, 254);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(450, 129);
             this.dataGridView1.TabIndex = 0;
@@ -134,7 +134,7 @@
             // 
             // btnnovo
             // 
-            this.btnnovo.Location = new System.Drawing.Point(201, 404);
+            this.btnnovo.Location = new System.Drawing.Point(238, 404);
             this.btnnovo.Name = "btnnovo";
             this.btnnovo.Size = new System.Drawing.Size(81, 22);
             this.btnnovo.TabIndex = 10;
@@ -143,7 +143,7 @@
             // 
             // btnsalvar
             // 
-            this.btnsalvar.Location = new System.Drawing.Point(307, 404);
+            this.btnsalvar.Location = new System.Drawing.Point(356, 404);
             this.btnsalvar.Name = "btnsalvar";
             this.btnsalvar.Size = new System.Drawing.Size(81, 22);
             this.btnsalvar.TabIndex = 11;
@@ -152,7 +152,7 @@
             // 
             // btncalcular
             // 
-            this.btncalcular.Location = new System.Drawing.Point(406, 404);
+            this.btncalcular.Location = new System.Drawing.Point(462, 404);
             this.btncalcular.Name = "btncalcular";
             this.btncalcular.Size = new System.Drawing.Size(81, 22);
             this.btncalcular.TabIndex = 12;
@@ -161,7 +161,7 @@
             // 
             // btnsair
             // 
-            this.btnsair.Location = new System.Drawing.Point(530, 404);
+            this.btnsair.Location = new System.Drawing.Point(571, 404);
             this.btnsair.Name = "btnsair";
             this.btnsair.Size = new System.Drawing.Size(81, 22);
             this.btnsair.TabIndex = 13;
