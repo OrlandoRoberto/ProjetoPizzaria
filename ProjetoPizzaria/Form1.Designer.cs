@@ -28,45 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblValorPizaa = new System.Windows.Forms.Label();
+            this.dgvPedido = new System.Windows.Forms.DataGridView();
+            this.lblValorPizzaria = new System.Windows.Forms.Label();
             this.lblvalordosOpcionais = new System.Windows.Forms.Label();
             this.lbltotalaPagar = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cmbTamanhoPizza = new System.Windows.Forms.ComboBox();
+            this.txtValorPizza = new System.Windows.Forms.TextBox();
+            this.txtValorOpcionais = new System.Windows.Forms.TextBox();
+            this.txtValorPagar = new System.Windows.Forms.TextBox();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.lblPesquisar = new System.Windows.Forms.Label();
             this.btnnovo = new System.Windows.Forms.Button();
             this.btnsalvar = new System.Windows.Forms.Button();
             this.btncalcular = new System.Windows.Forms.Button();
             this.btnsair = new System.Windows.Forms.Button();
-            this.checkbordaRecheada = new System.Windows.Forms.CheckBox();
-            this.checkcebola = new System.Windows.Forms.CheckBox();
-            this.checkcatupiry = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.chkBorda = new System.Windows.Forms.CheckBox();
+            this.chkCebola = new System.Windows.Forms.CheckBox();
+            this.chkCatupiry = new System.Windows.Forms.CheckBox();
+            this.chkTempero = new System.Windows.Forms.CheckBox();
             this.grpboxgrupoOpções = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.grpboxgrupoOpções.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPedido
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(228, 254);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(450, 129);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedido.Location = new System.Drawing.Point(228, 254);
+            this.dgvPedido.Name = "dgvPedido";
+            this.dgvPedido.Size = new System.Drawing.Size(450, 129);
+            this.dgvPedido.TabIndex = 0;
+            this.dgvPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvPedido.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDoubleClick);
             // 
-            // lblValorPizaa
+            // lblValorPizzaria
             // 
-            this.lblValorPizaa.AutoSize = true;
-            this.lblValorPizaa.Location = new System.Drawing.Point(258, 44);
-            this.lblValorPizaa.Name = "lblValorPizaa";
-            this.lblValorPizaa.Size = new System.Drawing.Size(74, 13);
-            this.lblValorPizaa.TabIndex = 1;
-            this.lblValorPizaa.Text = "Valor da Pizza";
+            this.lblValorPizzaria.AutoSize = true;
+            this.lblValorPizzaria.Location = new System.Drawing.Point(258, 44);
+            this.lblValorPizzaria.Name = "lblValorPizzaria";
+            this.lblValorPizzaria.Size = new System.Drawing.Size(74, 13);
+            this.lblValorPizzaria.TabIndex = 1;
+            this.lblValorPizzaria.Text = "Valor da Pizza";
+            this.lblValorPizzaria.Click += new System.EventHandler(this.lblValorPiza_Click);
             // 
             // lblvalordosOpcionais
             // 
@@ -87,34 +91,36 @@
             this.lbltotalaPagar.TabIndex = 3;
             this.lbltotalaPagar.Text = "Total a Pagar";
             // 
-            // comboBox1
+            // cmbTamanhoPizza
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(27, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cmbTamanhoPizza.FormattingEnabled = true;
+            this.cmbTamanhoPizza.Location = new System.Drawing.Point(18, 84);
+            this.cmbTamanhoPizza.Name = "cmbTamanhoPizza";
+            this.cmbTamanhoPizza.Size = new System.Drawing.Size(121, 21);
+            this.cmbTamanhoPizza.TabIndex = 4;
             // 
-            // textBox1
+            // txtValorPizza
             // 
-            this.textBox1.Location = new System.Drawing.Point(261, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtValorPizza.Location = new System.Drawing.Point(261, 84);
+            this.txtValorPizza.Name = "txtValorPizza";
+            this.txtValorPizza.Size = new System.Drawing.Size(85, 20);
+            this.txtValorPizza.TabIndex = 5;
+            this.txtValorPizza.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtValorOpcionais
             // 
-            this.textBox2.Location = new System.Drawing.Point(412, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(92, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtValorOpcionais.Location = new System.Drawing.Point(412, 84);
+            this.txtValorOpcionais.Name = "txtValorOpcionais";
+            this.txtValorOpcionais.Size = new System.Drawing.Size(92, 20);
+            this.txtValorOpcionais.TabIndex = 6;
+            this.txtValorOpcionais.Text = " ";
             // 
-            // textBox3
+            // txtValorPagar
             // 
-            this.textBox3.Location = new System.Drawing.Point(584, 84);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(94, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtValorPagar.Location = new System.Drawing.Point(584, 84);
+            this.txtValorPagar.Name = "txtValorPagar";
+            this.txtValorPagar.Size = new System.Drawing.Size(94, 20);
+            this.txtValorPagar.TabIndex = 7;
             // 
             // txtPesquisar
             // 
@@ -122,6 +128,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(135, 20);
             this.txtPesquisar.TabIndex = 8;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged_1);
             // 
             // lblPesquisar
             // 
@@ -149,6 +156,7 @@
             this.btnsalvar.TabIndex = 11;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.UseVisualStyleBackColor = true;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // btncalcular
             // 
@@ -158,6 +166,7 @@
             this.btncalcular.TabIndex = 12;
             this.btncalcular.Text = "Calcular";
             this.btncalcular.UseVisualStyleBackColor = true;
+            this.btncalcular.Click += new System.EventHandler(this.btncalcular_Click);
             // 
             // btnsair
             // 
@@ -168,64 +177,72 @@
             this.btnsair.Text = "Sair";
             this.btnsair.UseVisualStyleBackColor = true;
             // 
-            // checkbordaRecheada
+            // chkBorda
             // 
-            this.checkbordaRecheada.AutoSize = true;
-            this.checkbordaRecheada.Location = new System.Drawing.Point(6, 34);
-            this.checkbordaRecheada.Name = "checkbordaRecheada";
-            this.checkbordaRecheada.Size = new System.Drawing.Size(107, 17);
-            this.checkbordaRecheada.TabIndex = 14;
-            this.checkbordaRecheada.Text = "Borda Recheada";
-            this.checkbordaRecheada.UseVisualStyleBackColor = true;
+            this.chkBorda.AutoSize = true;
+            this.chkBorda.Location = new System.Drawing.Point(6, 34);
+            this.chkBorda.Name = "chkBorda";
+            this.chkBorda.Size = new System.Drawing.Size(107, 17);
+            this.chkBorda.TabIndex = 14;
+            this.chkBorda.Text = "Borda Recheada";
+            this.chkBorda.UseVisualStyleBackColor = true;
             // 
-            // checkcebola
+            // chkCebola
             // 
-            this.checkcebola.AutoSize = true;
-            this.checkcebola.Location = new System.Drawing.Point(6, 71);
-            this.checkcebola.Name = "checkcebola";
-            this.checkcebola.Size = new System.Drawing.Size(112, 17);
-            this.checkcebola.TabIndex = 15;
-            this.checkcebola.Text = "Cebola sem Choro";
-            this.checkcebola.UseVisualStyleBackColor = true;
+            this.chkCebola.AutoSize = true;
+            this.chkCebola.Location = new System.Drawing.Point(6, 71);
+            this.chkCebola.Name = "chkCebola";
+            this.chkCebola.Size = new System.Drawing.Size(112, 17);
+            this.chkCebola.TabIndex = 15;
+            this.chkCebola.Text = "Cebola sem Choro";
+            this.chkCebola.UseVisualStyleBackColor = true;
             // 
-            // checkcatupiry
+            // chkCatupiry
             // 
-            this.checkcatupiry.AutoSize = true;
-            this.checkcatupiry.Location = new System.Drawing.Point(6, 99);
-            this.checkcatupiry.Name = "checkcatupiry";
-            this.checkcatupiry.Size = new System.Drawing.Size(102, 17);
-            this.checkcatupiry.TabIndex = 16;
-            this.checkcatupiry.Text = "Catupiry Original";
-            this.checkcatupiry.UseVisualStyleBackColor = true;
+            this.chkCatupiry.AutoSize = true;
+            this.chkCatupiry.Location = new System.Drawing.Point(6, 99);
+            this.chkCatupiry.Name = "chkCatupiry";
+            this.chkCatupiry.Size = new System.Drawing.Size(102, 17);
+            this.chkCatupiry.TabIndex = 16;
+            this.chkCatupiry.Text = "Catupiry Original";
+            this.chkCatupiry.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkTempero
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(6, 132);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(108, 17);
-            this.checkBox4.TabIndex = 17;
-            this.checkBox4.Text = "Tempero do Chef";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkTempero.AutoSize = true;
+            this.chkTempero.Location = new System.Drawing.Point(6, 132);
+            this.chkTempero.Name = "chkTempero";
+            this.chkTempero.Size = new System.Drawing.Size(108, 17);
+            this.chkTempero.TabIndex = 17;
+            this.chkTempero.Text = "Tempero do Chef";
+            this.chkTempero.UseVisualStyleBackColor = true;
             // 
             // grpboxgrupoOpções
             // 
-            this.grpboxgrupoOpções.Controls.Add(this.checkbordaRecheada);
-            this.grpboxgrupoOpções.Controls.Add(this.checkBox4);
-            this.grpboxgrupoOpções.Controls.Add(this.checkcebola);
-            this.grpboxgrupoOpções.Controls.Add(this.checkcatupiry);
-            this.grpboxgrupoOpções.Location = new System.Drawing.Point(12, 84);
+            this.grpboxgrupoOpções.Controls.Add(this.chkBorda);
+            this.grpboxgrupoOpções.Controls.Add(this.chkTempero);
+            this.grpboxgrupoOpções.Controls.Add(this.chkCebola);
+            this.grpboxgrupoOpções.Controls.Add(this.chkCatupiry);
+            this.grpboxgrupoOpções.Location = new System.Drawing.Point(18, 142);
             this.grpboxgrupoOpções.Name = "grpboxgrupoOpções";
             this.grpboxgrupoOpções.Size = new System.Drawing.Size(200, 167);
             this.grpboxgrupoOpções.TabIndex = 18;
             this.grpboxgrupoOpções.TabStop = false;
             this.grpboxgrupoOpções.Text = "Escolha Opcionais";
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(18, 37);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(104, 20);
+            this.txtCodigo.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.grpboxgrupoOpções);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btncalcular);
@@ -233,18 +250,18 @@
             this.Controls.Add(this.btnnovo);
             this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.txtPesquisar);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtValorPagar);
+            this.Controls.Add(this.txtValorOpcionais);
+            this.Controls.Add(this.txtValorPizza);
+            this.Controls.Add(this.cmbTamanhoPizza);
             this.Controls.Add(this.lbltotalaPagar);
             this.Controls.Add(this.lblvalordosOpcionais);
-            this.Controls.Add(this.lblValorPizaa);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblValorPizzaria);
+            this.Controls.Add(this.dgvPedido);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
             this.grpboxgrupoOpções.ResumeLayout(false);
             this.grpboxgrupoOpções.PerformLayout();
             this.ResumeLayout(false);
@@ -254,25 +271,26 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblValorPizaa;
+        private System.Windows.Forms.DataGridView dgvPedido;
+        private System.Windows.Forms.Label lblValorPizzaria;
         private System.Windows.Forms.Label lblvalordosOpcionais;
         private System.Windows.Forms.Label lbltotalaPagar;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cmbTamanhoPizza;
+        private System.Windows.Forms.TextBox txtValorPizza;
+        private System.Windows.Forms.TextBox txtValorOpcionais;
+        private System.Windows.Forms.TextBox txtValorPagar;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.Button btnnovo;
         private System.Windows.Forms.Button btnsalvar;
         private System.Windows.Forms.Button btncalcular;
         private System.Windows.Forms.Button btnsair;
-        private System.Windows.Forms.CheckBox checkbordaRecheada;
-        private System.Windows.Forms.CheckBox checkcebola;
-        private System.Windows.Forms.CheckBox checkcatupiry;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox chkBorda;
+        private System.Windows.Forms.CheckBox chkCebola;
+        private System.Windows.Forms.CheckBox chkCatupiry;
+        private System.Windows.Forms.CheckBox chkTempero;
         private System.Windows.Forms.GroupBox grpboxgrupoOpções;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }
 

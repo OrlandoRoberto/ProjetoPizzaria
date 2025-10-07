@@ -1,4 +1,4 @@
--- cirando banco de dados
+-- criando banco de dados
 
 create database dbpizza;
 -- usando o banco de dados
